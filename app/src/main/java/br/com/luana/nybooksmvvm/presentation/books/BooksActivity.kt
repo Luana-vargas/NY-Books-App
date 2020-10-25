@@ -1,11 +1,12 @@
-package br.com.luana.nybooksmvvm
+package br.com.luana.nybooksmvvm.presentation.books
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.com.luana.nybooksmvvm.R
 
-class MainActivity : AppCompatActivity() {
+class BooksActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_books)
     }
 }
