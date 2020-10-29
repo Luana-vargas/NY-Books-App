@@ -24,7 +24,9 @@ android {
     }
 }
 
-
+ext{
+    retrofitVersion="2.6.0"
+}
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -37,6 +39,9 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
     implementation 'android.arch.lifecycle:extensions:1.1.1'
+
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
