@@ -10,12 +10,7 @@ object ApiService {
 
         return Retrofit.Builder()
             .baseUrl("https://api.nytimes.com/svc/books/v3/")
-            .addConverterFactory(
-                MoshiConverterFactory.create(
-                    Moshi.Builder()
-                        .build()
-                )
-            )
+            .addConverterFactory(MoshiConverterFactory.create())
             .build()
     }
 
