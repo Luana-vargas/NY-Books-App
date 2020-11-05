@@ -1,6 +1,5 @@
 package br.com.luana.nybooksmvvm.presentation.books
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -37,6 +36,16 @@ class BooksActivity : BaseActivity() {
                         this@BooksActivity.startActivity(intent)
 
                     }
+                }
+            }
+        })
+
+        viewModel.viewFlipperLiveData.observe(this, Observer {
+            it?.let { viewFlipper ->
+                viewFlipperBooks.displayedChild = viewFlipper.first
+
+                viewFlipper.second?.let { errorMessageResId ->
+                    textViewError.text = getString(errorMessageResId)
                 }
             }
         })
